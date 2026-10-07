@@ -1,0 +1,4 @@
+{
+  "setup": "timeout 420 go mod download || echo 'go mod download did not finish; review continues'; timeout 300 go build ./pkg/... >/tmp/go-build.log 2>&1 || echo 'go build ./pkg/... did not finish or failed; see /tmp/go-build.log'; true",
+  "setup_on_boot": "true"
+}
